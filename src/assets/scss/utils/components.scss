@@ -1,0 +1,493 @@
+.contacts {
+    padding: 5vw 5vw;
+    display: block;
+
+    @media only screen and (min-width: $smDesktopWidth) {
+        display  : flex;
+        flex-wrap: wrap;
+    }
+
+    &__main-title {
+        color        : $neutral-primary;
+        font-size    : 50px;
+        font-weight  : 400;
+        margin-bottom: 50px;
+        width        : 100%;
+    }
+
+    &__left-block {
+        @media only screen and (min-width: $smDesktopWidth) {
+            width: 55%;
+        }
+    }
+
+    &__technical-support {
+        @media only screen and (min-width: $smDesktopWidth) {
+            width       : 45%;
+            padding-left: 30px;
+        }
+    }
+
+    &__block {
+        display: block;
+
+        @media only screen and (min-width:$smTableWidth) {
+            display       : flex;
+            flex-direction: column;
+        }
+
+        @media only screen and (min-width:$tableWidth) {
+            flex-direction: row;
+        }
+    }
+
+    &__block-title {
+        color        : $neutral-primary;
+        font-size    : 34px;
+        font-weight  : 300;
+        line-height  : 48px;
+        margin-bottom: 43px;
+    }
+
+    &__name-title {
+        color: $primary-color;
+    }
+
+    &__paragraph {
+        color      : $neutral-primary;
+        font-size  : 15px;
+        font-weight: 300;
+        line-height: 28px;
+        flex       : 1;
+
+        @media only screen and (min-width:$smDesktopWidth) {
+            flex        : none;
+            margin-right: 50px;
+        }
+
+        @at-root .contacts__paragraph {
+            .contacts__link {
+                margin-top: 35px;
+            }
+        }
+    }
+
+    &__link {
+        color        : $primary-color;
+        font-size    : 26px;
+        font-weight  : 400;
+        margin-top   : 20px;
+        margin-bottom: 40px;
+        display      : block;
+    }
+
+    &__address-block {
+
+        line-height: 25px;
+
+        @media only screen and (min-width:$tableWidth) {
+            display        : flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__address-list {
+        margin-bottom: 40px;
+        flex         : 1;
+    }
+
+    &__list-item {
+        color      : $neutral-primary;
+        font-size  : 15px;
+        font-weight: 100;
+
+        a {
+            font-size     : 14px;
+            font-weight   : bold;
+            text-transform: uppercase;
+        }
+    }
+}
+
+// map 
+
+.map {
+    background: $neutral-placeholder;
+
+    &__container {
+        @media only screen and (min-width: $desktopWidth) {
+            display: flex;
+        }
+    }
+
+
+    &__main-title {
+        color        : $default-color;
+        font-size    : 34px;
+        font-weight  : 400;
+        margin-bottom: 49px;
+    }
+
+    &__row {
+        padding: 5vw;
+        flex   : 1;
+    }
+
+    &__nav {
+        display        : flex;
+        justify-content: space-between;
+    }
+
+
+}
+
+.tab {
+    display        : flex;
+    justify-content: space-between;
+
+    @media only screen and (min-width: $smTableWidth) {
+        width: 330px;
+    }
+
+    &__content {
+        position: relative;
+        height  : 210px;
+    }
+
+    &__single-item {
+        color         : $default-color;
+        font-size     : 11px;
+        font-weight   : 800;
+        text-transform: uppercase;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &.active {
+            color: $primary-color;
+        }
+    }
+
+    &__content-item {
+        position          : absolute;
+        width             : 100%;
+        height            : 100%;
+        display           : flex;
+        justify-content   : center;
+        align-items       : center;
+        transition        : 0.5s;
+        // transform      : scale(0);
+        opacity           : 0;
+
+        @media only screen and (min-width: $smTableWidth) {
+            justify-content: left;
+        }
+
+        &.active {
+            // transform: scale(1);
+            opacity: 1;
+        }
+    }
+}
+
+.inner-content {
+    &__title {
+        font-size    : 26px;
+        font-weight  : 400;
+        color        : $default-color;
+        margin-bottom: 36px;
+        margin-top   : 20px;
+
+        @media only screen and (min-width: $smTableWidth) {
+            margin-top: 0;
+        }
+    }
+
+    &__item {
+        color         : $default-color;
+        font-size     : 11px;
+        line-height   : 20px;
+        font-weight   : 300;
+        letter-spacing: 0.5px;
+    }
+}
+
+// google map 
+
+#google-map {
+    padding: 0;
+    height : 480px;
+
+    @media only screen and (min-width: $desktopWidth) {
+        height    : 510px;
+        width     : 100%;
+        flex-basis: 100%;
+        flex      : 1;
+    }
+
+}
+
+// contact form
+
+
+
+.form {
+    padding   : 5vw;
+    background: $primary-color url('/assets/img/Pattern.png');
+
+    &__title {
+        font-size    : 34px;
+        font-weight  : 300;
+        color        : $default-color;
+        margin-top   : 20px;
+        margin-bottom: 20px;
+    }
+
+    &__container {
+        @media only screen and (min-width:$smTableWidth) {
+            display: flex;
+        }
+    }
+
+    &__wrapper {
+        @media only screen and (min-width:$smDesktopWidth) {
+            width: 50%;
+        }
+    }
+
+    &__paragraph {
+        display        : none;
+        justify-content: center;
+        padding        : 0 25px;
+        text-align     : left;
+
+        @media only screen and (min-width:$smTableWidth) {
+            display: flex;
+
+        }
+
+        @media only screen and (min-width:$desktopWidth) {
+            padding   : 0 180px;
+            text-align: left;
+        }
+    }
+
+    &__contact {
+        display       : flex;
+        flex-direction: column;
+
+        .label {
+            font-size    : 18px;
+            font-weight  : 300;
+            font-weight  : 400;
+            color        : $black;
+            margin-bottom: 0px;
+            position     : relative;
+            bottom       : 50px;
+        }
+
+        input {
+            background      : transparent;
+            border-bottom   : 1px solid $black;
+            margin-bottom   : 15px;
+            padding-left    : 70px;
+            line-height     : 40px;
+            // margin-left  : -55px;
+            width           : 100%;
+
+            &:focus {
+                &.form__input {
+                    border-bottom-color: $border-light;
+                    color              : $default-color;
+                }
+            }
+
+        }
+
+
+    }
+
+    &__group {
+        &:focus-within {
+            .label {
+                color: $default-color;
+            }
+        }
+    }
+
+    &__checkbox {
+        display    : flex;
+        align-items: baseline;
+        position   : relative;
+
+        #terms {
+            width        : 20px;
+            margin-right : 20px;
+            margin-bottom: 30px;
+        }
+    }
+
+    .checkmark {
+        position        : absolute;
+        top             : 5px;
+        left            : 2px;
+        height          : 15px;
+        width           : 15px;
+        background-color: $default-color;
+    }
+
+    input:checked~.checkmark:after {
+        display: block;
+    }
+
+    .checkmark:after {
+        left             : 4px;
+        top              : 0px;
+        width            : 7px;
+        height           : 12px;
+        border           : solid $neutral-primary;
+        border-width     : 0 3px 3px 0;
+        border-width     : 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform    : rotate(45deg);
+        transform        : rotate(45deg);
+    }
+
+    .checkmark:after {
+        content : "";
+        position: absolute;
+        display : none;
+    }
+
+    &__submit {
+        width           : 279px;
+        height          : 83px;
+        background-color: $neutral-secondary;
+        color           : $default-color;
+        text-transform  : uppercase;
+        font-size       : 11px;
+        font-weight     : 400;
+
+        &:disabled {
+            opacity: .5;
+        }
+    }
+}
+
+.helper-text {
+    &.invalid {
+        width   : 100%;
+        display : block;
+        position: relative;
+        bottom  : 40px;
+        color   : #ffe77b;
+    }
+}
+
+.succes__message {
+    display   : none;
+    text-align: center;
+
+    @media only screen and (min-width:$smTableWidth) {
+        text-align: left;
+
+    }
+}
+
+@keyframes scaleAnimation {
+    0% {
+        opacity  : 0;
+        transform: scale(1.5);
+    }
+
+    100% {
+        opacity  : 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes drawCircle {
+    0% {
+        stroke-dashoffset: $circle-length;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes drawCheck {
+    0% {
+        stroke-dashoffset: $check-length;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.animated {
+    display: block;
+    margin : 0 auto;
+
+    @media only screen and (min-width:$smTableWidth) {
+
+        margin: 16px 110px;
+        width : 200px;
+
+    }
+}
+
+#successAnimationCircle {
+    stroke-dasharray: $circle-length $circle-length;
+    stroke          : #FFF;
+}
+
+#successAnimationCheck {
+    stroke-dasharray: $check-length $check-length;
+    stroke          : #FFF;
+}
+
+#successAnimationResult {
+    fill   : #FFF;
+    opacity: 0;
+}
+
+#successAnimation.animated {
+    animation: 1s ease-out 0s 1 both scaleAnimation;
+
+    #successAnimationCircle {
+        animation: 1s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 both drawCircle,
+            0.3s linear 0.9s 1 both fadeOut;
+    }
+
+    #successAnimationCheck {
+        animation: 1s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 both drawCheck,
+            0.3s linear 0.9s 1 both fadeOut;
+    }
+
+    #successAnimationResult {
+        animation: 0.3s linear 0.9s both fadeIn;
+    }
+}
